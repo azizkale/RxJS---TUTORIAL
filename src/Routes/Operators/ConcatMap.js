@@ -1,6 +1,6 @@
 import express from "express";
 import { of } from "rxjs";
-import { concatMap, delay, mergeMap } from "rxjs/operators";
+import { concatMap, delay } from "rxjs/operators";
 
 const opconcatmap = express.Router();
 
