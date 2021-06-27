@@ -14,13 +14,12 @@ const PORT = process.env.PORT || 4003;
 const app = express();
 app.use(cors());
 
-app.use("/", opof);
+app.use("/", opof, opconcatmap);
 app.use("/", opfrom);
 app.use("/", opmap);
 app.use("/", opscan);
 app.use("/", opinterval);
 app.use("/", optap);
 app.use("/", optimer);
-app.use("/", opconcatmap);
 
 app.listen(PORT, () => console.log(`Server runs on ${PORT}`));
