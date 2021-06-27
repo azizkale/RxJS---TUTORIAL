@@ -9,13 +9,14 @@ import optap from "./Routes/Operators/Tap";
 import optimer from "./Routes/Operators/Timer";
 import opconcatmap from "./Routes/Operators/ConcatMap";
 import opmergemap from "./Routes/Operators/MergeMap";
+import switchmap from "./Routes/Operators/SwitchMap";
 
 const PORT = process.env.PORT || 4003;
 
 const app = express();
 app.use(cors());
 
-app.use("/", opof, opconcatmap, opmergemap);
+app.use("/", opof, opconcatmap, opmergemap, switchmap);
 app.use("/", opfrom);
 app.use("/", opmap);
 app.use("/", opscan);
