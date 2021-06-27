@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 4003;
 const app = express();
 app.use(cors());
 
-app.use("/opof", opof);
-app.use("/opfrom", opfrom);
-app.use("/opmap", opmap);
+app.use("/", opof);
+app.use("/", opfrom);
+app.use("/", opmap);
 
 app.listen(PORT, () => console.log(`Server runs on ${PORT}`));

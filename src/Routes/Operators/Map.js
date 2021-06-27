@@ -5,13 +5,13 @@ import { map } from "rxjs/operators";
 
 const opMap = express.Router();
 
-opMap.route("/").get(async (req, res, next) => {
+opMap.route("/opmap").get(async (req, res, next) => {
   await axios.get("https://swapi.dev/api/people").then((result) => {
     const array = from(result.data.results);
 
     array
       .pipe(map((val) => parseInt(val["height"]) + 50))
-      .subscribe((val) => console.log(val));
+      .subscribe(console.log);
   });
 });
 
