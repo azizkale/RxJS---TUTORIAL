@@ -5,6 +5,7 @@ import opfrom from "./Routes/Operators/From";
 import opmap from "./Routes/Operators/Map";
 import opscan from "./Routes/Operators/Scan";
 import opinterval from "./Routes/Operators/Interval";
+import optap from "./Routes/Operators/Tap";
 
 const PORT = process.env.PORT || 4003;
 
@@ -16,5 +17,6 @@ app.use("/", opfrom);
 app.use("/", opmap);
 app.use("/", opscan);
 app.use("/", opinterval);
+app.use("/", optap);
 
 app.listen(PORT, () => console.log(`Server runs on ${PORT}`));
