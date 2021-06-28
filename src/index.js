@@ -21,6 +21,12 @@ app.use(cors());
 
 app.use(
   "/",
+  opfrom,
+  opmap,
+  opscan,
+  opinterval,
+  optap,
+  optimer,
   opof,
   opconcatmap,
   opmergemap,
@@ -29,11 +35,5 @@ app.use(
   opretry_delay,
   opfilter
 );
-app.use("/", opfrom);
-app.use("/", opmap);
-app.use("/", opscan);
-app.use("/", opinterval);
-app.use("/", optap);
-app.use("/", optimer);
 
 app.listen(PORT, () => console.log(`Server runs on ${PORT}`));
