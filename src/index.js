@@ -11,13 +11,22 @@ import opconcatmap from "./Routes/Operators/ConcatMap";
 import opmergemap from "./Routes/Operators/MergeMap";
 import switchmap from "./Routes/Operators/SwitchMap";
 import throwerror from "./Routes/Operators/ThrowError";
+import opretry_delay from "./Routes/Operators/RetryWhen-delayWhen";
 
 const PORT = process.env.PORT || 4003;
 
 const app = express();
 app.use(cors());
 
-app.use("/", opof, opconcatmap, opmergemap, switchmap, throwerror);
+app.use(
+  "/",
+  opof,
+  opconcatmap,
+  opmergemap,
+  switchmap,
+  throwerror,
+  opretry_delay
+);
 app.use("/", opfrom);
 app.use("/", opmap);
 app.use("/", opscan);
