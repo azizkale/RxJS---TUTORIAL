@@ -12,6 +12,7 @@ import opmergemap from "./Routes/Operators/MergeMap";
 import switchmap from "./Routes/Operators/SwitchMap";
 import throwerror from "./Routes/Operators/ThrowError";
 import opretry_delay from "./Routes/Operators/RetryWhen-delayWhen";
+import opfilter from "./Routes/Operators/Filter";
 
 const PORT = process.env.PORT || 4003;
 
@@ -25,7 +26,8 @@ app.use(
   opmergemap,
   switchmap,
   throwerror,
-  opretry_delay
+  opretry_delay,
+  opfilter
 );
 app.use("/", opfrom);
 app.use("/", opmap);
