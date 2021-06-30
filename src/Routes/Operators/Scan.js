@@ -17,7 +17,7 @@ opScan.route("/opscan").get(async (req, res, next) => {
       scan((total, n) => {
         return total + n;
       }),
-      map((sum, index) => sum / index)
+      map((sum, index) => sum)
     )
     .subscribe(console.log);
 
