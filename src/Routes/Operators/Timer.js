@@ -5,7 +5,7 @@ import { concatMapTo } from "rxjs/operators";
 const optimer = express.Router();
 
 optimer.route("/optimer").get(async (req, res, next) => {
-  example - 1;
+  //example - 1;
   const source = timer(1000);
   //output: 0
   const subscribe = source.subscribe((val) => console.log("example-1: " + val));
